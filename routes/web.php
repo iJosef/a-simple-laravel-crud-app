@@ -16,4 +16,6 @@ Route::get('/', function () {
 });
 
 Route::resource('post', 'PostController');
+
+Route::get('/user/{user_id}/add-skill/{skill_id}/', 'TestController@testFunction');
 /*Route::get('/', 'PagesController@index');*/
