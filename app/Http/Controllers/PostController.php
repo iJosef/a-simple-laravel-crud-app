@@ -27,7 +27,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('create-post');
     }
 
     /**
@@ -38,7 +38,18 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //echo "store";
+
+        //dd($request);
+
+        $post = new Post([
+            'title' => $request->title,
+            'description' => $request->description,
+        ]);
+
+        $post->save();
+
+        return ($this->index());
     }
 
     /**
