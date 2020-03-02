@@ -14,5 +14,7 @@
             
         @endforeach
     </ul>
+
+    <p><a href="/create">Create New Post</a></p>
 </body>
 </html>

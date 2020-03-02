@@ -20,5 +20,7 @@
         <br/>
         <input type="submit" value="submit">
     </form>
+
+    <p><a href="/">All posts</a></p>
 </body>
 </html>
