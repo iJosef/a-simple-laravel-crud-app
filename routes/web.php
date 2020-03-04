@@ -15,8 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 */
+Route::get('/', 'PostController@index');
 
-Route::resource('/', 'PostController');
+Route::resource('posts', 'PostController');
+
+//Route::get('/post/{id}', 'PostController@show');
 
 Route::get('/user/{user_id}/add-skill/{skill_id}/', 'TestController@testFunction');
 /*Route::get('/', 'PagesController@index');*/

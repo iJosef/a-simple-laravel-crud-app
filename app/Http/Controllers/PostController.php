@@ -15,7 +15,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('index')->with([
+        return view('posts.index')->with([
             'posts' => $posts
         ]);
     }
@@ -27,7 +27,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('create-post');
+        return view('posts.create-post');
     }
 
     /**
@@ -60,7 +60,15 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('posts.post', [
+            'post' => $post
+        ]);
+
+        /*return view('post')->with([
+            'post' => $post
+        ]);*/
+
+        //return view('post')->compost('post');
     }
 
     /**

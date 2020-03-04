@@ -6,15 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>My Blog Post</h1>
+    
+    <h1>Full Post</h1>
 
-    <ul>
-        @foreach ($posts as $post)
-            <li> {{$post->title}} </li>
-            
-        @endforeach
-    </ul>
+    <h3> {{$post->title}} </h3>
 
-    <p><a href="/create">Create New Post</a></p>
+    <p> {{$post->description}} </p>
+
+    <p><a href="/">Back to home</a></p>
 </body>
 </html>
