@@ -10,7 +10,7 @@
 
     <ul>
         @foreach ($posts as $post)
-            <li> {{$post->title}} <a href="/posts/{{ $post->id }}">See full post</a></li>
+            <li> {{$post->title}} <a href="/posts/{{ $post->id }}">See full post</a> | <a href="/posts/{{ $post->id }}/edit ">Edit Post</a></li>
             
         @endforeach
     </ul>
