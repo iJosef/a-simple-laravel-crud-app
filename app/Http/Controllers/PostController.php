@@ -93,7 +93,13 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $post->update([
+            'title' => $request->title,
+            'description' => $request->description
+        ]);
+
+        return($this->index());
+        
     }
 
     /**

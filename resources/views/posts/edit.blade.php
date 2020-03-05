@@ -8,10 +8,10 @@
 <body>
     <h1> Create new post </h1>
 
-    <form action="/" method="POST">
+    <form action="/posts/{{ $post->id }}" method="POST">
 
         @csrf
-        
+        @method("PUT")
         Title <br/>
         <input type="text" name="title" value="{{ $post->title }}">
         <br/><br/>
