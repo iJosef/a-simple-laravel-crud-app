@@ -10,7 +10,13 @@
 
     <ul>
         @foreach ($posts as $post)
-            <li> {{$post->title}} <a href="/posts/{{ $post->id }}">See full post</a> | <a href="/posts/{{ $post->id }}/edit ">Edit Post</a></li>
+            <li> {{$post->title}} <a href="/posts/{{ $post->id }}">See full post</a> | <a href="/posts/{{ $post->id }}/edit ">Edit Post</a> | 
+                <form style="display:inline;" method="post" action="/posts/{{ $post->id }}">
+                    @csrf
+                    @method("DELETE")
+                    <input type="submit" value="Delete">
+                </form>
+            </li>
             
         @endforeach
     </ul>
